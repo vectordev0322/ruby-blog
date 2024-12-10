@@ -1462,3 +1462,60 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.1ms)
 
 
+Started GET "/articles/1" for 127.0.0.1 at 2024-12-10 09:09:14 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1 /*action='show',application='Blog',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = 1 /*action='show',application='Blog',controller='articles'*/[0m
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.6ms | GC: 0.2ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 9.5ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | GC: 0.9ms)
+Completed 200 OK in 24ms (Views: 11.5ms | ActiveRecord: 1.3ms (2 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-12-10 09:09:17 -0500
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /*action='index',application='Blog',controller='articles'*/[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2024-12-10 09:09:18 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1 /*action='show',application='Blog',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = 1 /*action='show',application='Blog',controller='articles'*/[0m
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.1ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 3.2ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.2ms)
+Completed 200 OK in 11ms (Views: 3.9ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2024-12-10 09:10:57 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = 1 LIMIT 1 /*action='show',application='Blog',controller='articles'*/[0m
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = 1 /*action='show',application='Blog',controller='articles'*/[0m
+  ↳ app/views/articles/show.html.erb:12
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.3ms | GC: 0.0ms)
+  Rendered comments/_form.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered articles/show.html.erb within layouts/application (Duration: 7.7ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | GC: 0.9ms)
+Completed 200 OK in 23ms (Views: 9.9ms | ActiveRecord: 1.5ms (2 queries, 0 cached) | GC: 1.2ms)
+
+
